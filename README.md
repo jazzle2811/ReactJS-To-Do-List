@@ -21,6 +21,7 @@ How to Test
 1. Clone the Repository
 
 git clone https://github.com/jazzle2811/ReactJS-To-Do-List.git
+
 cd ReactJS-To-Do-List
 
 2. Install Dependencies
@@ -32,6 +33,7 @@ npm install
 npm start
 
 4. Usage
+   
 Add a task in the input field and click the floppy icon to save.
 
 Click checkbox to mark a task as done or undone.
