@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #1476df, #ffffff);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: start;
+  padding-top: 30px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 500px;
+  background: rgb(131, 177, 195);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(33, 72, 94);
+  background: #9dcde8;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);;
+}
+
+.task-input {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.task-input input {
+  width: 100%;
+  padding: 14px 20px 14px 45px;
+  font-size: 16px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: #a0d3e8;
+}
+
+.task-input i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #354c66;
+  font-size: 18px;
+}
+
+.task-input .fa-floppy-o {
+  right: 15px;
+  left: auto;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters span {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.filters .active {
+  color: #3162b1;
+}
+
+.clear-btn {
+  padding: 6px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  background: #2D5CFE;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+ul.task-box {
+  list-style: none;
+  padding-left: 0;
+  max-height: 250px;
+  overflow-y: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+li.task:last-child {
+  border-bottom: none;
+}
+
+.task label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.task input[type='checkbox'] {
+  accent-color: #3C87FF;
+  margin-right: 10px;
+}
+
+.task p.checked {
+  text-decoration: line-through;
+  color: #544d4d;
+}
+
+.settings i {
+  cursor: pointer;
+  color: rgb(221, 39, 39);
 }
